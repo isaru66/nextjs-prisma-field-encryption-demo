@@ -42,5 +42,17 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 3. Run `npx prisma migrate dev` to migrate your local Prisma Postgres database.
 4. Tip: Explore how you can extend the ORM with scalable connection pooling, global caching, and a managed serverless Postgres database. Read: https://pris.ly/cli/beyond-orm
 
+## Generate Prisma Client
+```
+npx prisma generate
+```
+
+## Migrate Prisma ( Sync schema with DB)
+```
+npx prisma migrate dev --name init
+```
+
 ## Seed database
-`npx prisma db seed`
+```
+npx prisma db seed
+```

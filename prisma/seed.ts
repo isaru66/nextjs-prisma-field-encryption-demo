@@ -1,6 +1,12 @@
-import { PrismaClient, Prisma } from "../src/app/generated/prisma";
+import { PrismaClient, Prisma } from "@prisma/client";
+import { fieldEncryptionExtension } from "prisma-field-encryption";
 
-const prisma = new PrismaClient();
+// Create a simple client instance for seeding
+const globalClient = new PrismaClient()
+
+const client = globalClient.$extends(
+  fieldEncryptionExtension()
+)
 
 const userData: Prisma.UserCreateInput[] = [
   {
@@ -67,16 +73,16 @@ const userData: Prisma.UserCreateInput[] = [
 
 export async function main() {
   for (const u of userData) {
-    await prisma.user.create({ data: u });
+    await client.user.create({ data: u });
   }
 }
 
 main()
-.then(() => {
-  console.log("Seed process finished.");
-  process.exit(0);
-})
-.catch((error) => {
-  console.error("Unhandled error:", error);
-  process.exit(1);
-});
+  .then(() => {
+    console.log("Seed process finished.");
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error("Unhandled error:", error);
+    process.exit(1);
+  });
