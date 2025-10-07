@@ -1,6 +1,6 @@
 # Next.js + Prisma ORM Field-Level Encryption Demo
 
-This is a demonstration project showcasing **field-level encryption** in [Prisma ORM](https://www.prisma.io/) integrated with [Next.js](https://nextjs.org). The project demonstrates how to encrypt sensitive data fields (like ID card numbers) at the application layer using the `prisma-field-encryption` extension.
+This is a demonstration project showcasing **field-level encryption** in [Prisma ORM](https://www.prisma.io/) integrated with [Next.js](https://nextjs.org). The project demonstrates how to encrypt sensitive data fields (like ID card numbers) at the application layer using the [prisma-field-encryption](https://github.com/47ng/prisma-field-encryption) extension.
 
 ## 🎯 Project Overview
 
