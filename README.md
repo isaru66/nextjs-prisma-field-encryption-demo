@@ -67,8 +67,8 @@ npx prisma db seed
 This seeds the database with 12 sample users. The ID card numbers will be automatically encrypted in the database.
 
 #### Query Database
-you can use pgAdmin or psql to confirm that the data already encrypted inside database
-![PGAdminData](docs/images/pgadmin_data_encrypted.png)
+you can use AzureDataExplorer or SSMS to confirm that the data already encrypted inside database
+![AzureDataExplorer](docs/images/azure_data_explorer.png)
 
 ### 4. Run the Development Server
 
@@ -79,7 +79,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) to see the application displaying decrypted user data.
 
 #### Application screenshot
-![PGAdminData](docs/images/data_decrypted_on_nextjs.png)
+![NestJSApp](docs/images/data_decrypted_on_nextjs.png)
 
 
 ## 🏗️ Project Structure
